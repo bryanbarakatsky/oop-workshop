@@ -1,7 +1,7 @@
 """
     defines the dog class
 """
-from oopWorkshop.Pet.pet import Pet
+from Pet.pet import Pet
 
 class Dog(Pet):
 

@@ -1,6 +1,7 @@
 """
     defines the pet class with getters and setters
 """
+from .PetAgeError import PetAgeError
 
 class Pet:
     """
@@ -33,8 +34,8 @@ class Pet:
     @age.setter
     def age(self, age: int) -> None:
         """ sets the age of the pet """
-        if age < 0:
-            raise ValueError("Age cannot be negative")
+        if age < 1 or age > 30:
+            raise PetAgeError("Age must be between 1 and 30")
         self._age = age
 
     #species
